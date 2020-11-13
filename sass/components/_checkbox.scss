@@ -1,0 +1,50 @@
+.checkbox-input {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.checkbox-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: $add-text-color;
+
+  @media screen and (max-width: 1199px) {
+    font-size: 12px;
+    line-height: 1.167;
+  }
+
+  a {
+    color: $accent-color;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+  }
+}
+
+.checkbox-custom-box {
+  width: 1em;
+  height: 1em;
+  background-image: url(../images/icon-check-off.svg);
+  fill: #212121;
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  margin-right: 8px;
+
+  .checkbox-input:checked + & {
+    background-image: url(../images/icon-check-on.svg);
+    background-size: contain;
+    cursor: pointer;
+    background-repeat: no-repeat;
+  }
+
+  .checkbox-input:focus + & {
+    box-sizing: content-box;
+    border: 1px solid $accent-color;
+    border-radius: 4px;
+  }
+}
